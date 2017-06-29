@@ -1,0 +1,66 @@
+<problem>
+  <b>Where are they from? They are all from Spanish speaking countries. Select the appropriate option. </b>
+  <br/>
+  <br/>
+  <img src="/static/Banderas2.png" style="float:right" width="30%"/>
+  <table style="width:50%">
+    <tr>
+      <optionresponse>
+        <td>
+          <p style="display:inline">Una persona mexicana es de</p>
+        </td>
+        <td>
+          <optioninput label="Una persona mexicana es de..." options="('México','Colombia','Venezuela')" correct="México" inline="1">					  </optioninput>
+        </td>
+      </optionresponse>
+    </tr>
+    <tr>
+      <optionresponse>
+        <td>
+          <p style="display:inline">Un hombre argentino es de</p>
+        </td>
+        <td>
+          <optioninput inline="3" label="Un hombre argentino es de......" options="('Cuba','Chile','Argentina')" correct="Argentina"/>
+        </td>
+      </optionresponse>
+    </tr>
+    <tr>
+      <optionresponse>
+        <td>
+          <p style="display:inline">Una mujer cubana es de</p>
+        </td>
+        <td>
+          <optioninput inline="2" label="Una mujer cubana es de..." options="('Bolivia','Cuba','Puerto Rico')" correct="Cuba"/>
+        </td>
+      </optionresponse>
+    </tr>
+    <tr>
+      <optionresponse>
+        <td>
+          <p style="display:inline">Un hombre peruano es de</p>
+        </td>
+        <td>
+          <optioninput inline="2" label="Un hombre peruano es de..." options="('Panamá','Perú','Paraguay')" correct="Perú"/>
+        </td>
+      </optionresponse>
+    </tr>
+    <tr>
+      <optionresponse>
+        <td>
+          <p style="display:inline">Una mujer colombiana es de</p>
+        </td>
+        <td>
+          <optioninput inline="1" label="Una mujer colombiana es de..." options="('Colombia','Uruguay','Ecuador')" correct="Colombia"/>
+        </td>
+      </optionresponse>
+    </tr>
+  </table>
+  <div class="resetcustom"/>
+<div class="resetcustom"/>
+<script type="text/javascript">
+    (function(){
+    var reset = $('<span class="problem-action-button-wrapper"><button type="button" class="reset problem-action-btn btn-default btn-small" data-value="Reiniciar"><span class="icon fa fa-refresh" aria-hidden="true"></span><span aria-hidden="true">Reiniciar</span><span class="sr">Restablecer respuesta</span></button></span>');
+    $(".resetcustom").parent().siblings("div.action:not(:has(button.reset))").children(".problem-action-buttons-wrapper").prepend(reset);
+    })();
+  </script>
+</problem>

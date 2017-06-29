@@ -1,0 +1,4 @@
+<script type="text/javascript">
+$("button.show").click(function(){
+  if (this.textContent.toLowerCase().startsWith("show")||this.textContent.toLowerCase().startsWith("mostrar")){$('p[id^="answer"]',$(this.parentNode.parentNode)).after($('<b>}</b>'));$('p[id^="answer"]',$(this.parentNode.parentNode)).before($('<b>{</b>'));}else{$("b:contains('{')",$(this.parentNode.parentNode)).remove();$("b:contains('}')",$(this.parentNode.parentNode)).remove();}});
+</script>
