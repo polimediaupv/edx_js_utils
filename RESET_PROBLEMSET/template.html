@@ -1,0 +1,30 @@
+<p>
+<script>// <![CDATA[
+function reset(){
+var xblocks = $("div.vert");
+
+for (i=0;i<xblocks.length;i++)
+{
+ var locator = $(xblocks[i]).attr("data-id");
+var course = $($("div.xblock",$(xblocks[i]))[0]).attr("data-course-id");
+
+ console.log(course);
+ var settings = {
+      "async": true,
+      "crossDomain": true,
+      "url": "/courses/" + course + "/xblock/" + locator + "/handler/xmodule_handler/problem_reset",
+      "method": "POST",
+      "headers": {},
+      "data": {}
+    }
+
+ $.ajax(settings).done(function (response) {
+  location.reload();
+ });
+}
+}
+// ]]></script>
+</p>
+<div class="action">
+<div class="problem-action-buttons-wrapper"><span class="problem-action-button-wrapper"> <button type="button" class="reset problem-action-btn btn-default btn-small" onclick="reset();"><span class="icon fa fa-refresh" aria-hidden="true"></span><span aria-hidden="true">Reiniciar</span><span class="sr">Reset your answer</span></button> </span></div>
+</div>

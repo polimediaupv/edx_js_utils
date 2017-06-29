@@ -1,0 +1,49 @@
+<!-- Added for test purposes we use the jquery loaded at edx--->
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+
+<!-- Copy this into a edx block body (html/problem)--->
+<div id ="bloqueacopiar">
+	  <audio id="audio1" src="./static/yo-hablo.mp3" controls="controls">
+	    <p><span style="color:#FF0000"><em>Audio playback error</em></span></p>
+	  </audio>
+	  <form>
+      <input id="audio1pbr" type="range" value="1" min="0.5" max="1.5" step="0.1" />
+  		<p style="text-align:center;">
+        Playback Rate
+        <span id="audio1currentPbr">1</span>
+        <span class="firefoxmessage" hidden="true"><br/>(Only works while audio is playing)</span>
+      </p>
+	  </form>
+</div>
+
+<!-- Script can be copied into the block or uploaded and referenced as /static/scriptfilename-->
+<script type="text/javascript">
+
+controlSlider = function () {
+  console.log($(this));
+  var ad = $('audio', $(this).parent().parent())[0];
+  var ac = $('span', $(this).parent().parent())[1];
+  ac.innerHTML = this.value;
+  ad.playbackRate = this.value;
+};
+
+function configsliders() {
+  $('audio').each(function (index) {
+    var ap = $('input', $($('audio')[index]).parent())[0];
+    console.log('aqui hay que comprobar');
+    ap.addEventListener('input', controlSlider, false);
+  });
+}
+
+window.onload = function () {
+  configsliders();
+};
+
+$(document).ajaxComplete(function () {
+  configsliders();
+});
+
+</script>
